@@ -92,7 +92,7 @@ var populateDB = function() {
  
     var rates = [
     {
-        name: "CHATEAU DE SAINT COSME",
+        name: "Chateu de Saint Cosme",
         date: "2009",
         country: "France",
         category: "Vinos",
@@ -100,12 +100,108 @@ var populateDB = function() {
         picture: "argiano.jpg"
     },
     {
-        name: "LAN RIOJA CRIANZA",
+        name: "Puerto Viejo",
         date: "2006",
-        country: "Spain",
-        category: "Vinos",
-        description: "A resurgence of interest in boutique vineyards...",
-        picture: "lan_rioja.jpg"
+        country: "Costa Rica",
+        category: "Places",
+        description: "Beutiful beach place to travel and enjoy",
+        picture: "puertoviejo.jpg"
+    },
+    {
+        name: "Volcan Poas",
+        date: "2006",
+        country: "Costa Rica",
+        category: "Places",
+        description: "Beutiful Volcan place to travel and enjoy",
+        picture: "poas.jpg"
+    },
+    {
+        name: "GTA Vice City",
+        date: "2006",
+        country: "United States",
+        category: "Gaming",
+        description: "Action game from Rockstar Games.",
+        picture: "gtavc.jpg"
+    },
+    {
+        name: "Chifrijo",
+        date: "2006",
+        country: "Costa Rica",
+        category: "Food",
+        description: "Great food with pork, rice and beans.",
+        picture: "chifrijo.jpg"
+    },
+    {
+        name: "Lionel Messi",
+        date: "2006",
+        country: "España",
+        category: "Football",
+        description: "Best Football player from FIFA.",
+        picture: "messi.jpg"
+    },
+    {
+        name: "iPhone 5",
+        date: "2006",
+        country: "United States",
+        category: "Gatgets",
+        description: "Smartphone with top technology",
+        picture: "iphone.jpg"
+    },
+    {
+        name: "Backcountry",
+        date: "2006",
+        country: "United States",
+        category: "Gear",
+        description: "Gear sale company",
+        picture: "bc.jpg"
+    },
+    {
+        name: "Mazda Protege 5 2002",
+        date: "2002",
+        country: "Japan",
+        category: "Cars",
+        description: "2.0 liters engine, sport look and feel.",
+        picture: "protege.jpeg"
+    },
+    {
+        name: "Mario Benedetti",
+        date: "2006",
+        country: "Uruguay",
+        category: "Reading",
+        description: "Great novelist and poet from Uruguay.",
+        picture: "mario.jpg"
+    },
+    {
+        name: "Studio Ghibli",
+        date: "2006",
+        country: "Japan",
+        category: "Movies",
+        description: "Motion studio with great movies.",
+        picture: "ghibli.jpg"
+    },
+    {
+        name: "Metal Gear Solid V : Guns of the patriots",
+        date: "2006",
+        country: "Japan",
+        category: "Gaming",
+        description: "Great game from konami and Hideo Kojima",
+        picture: "metal.jpg"
+    },
+    {
+        name: "Honda CRF 230",
+        date: "2006",
+        country: "Japan",
+        category: "Motorcycles",
+        description: "Motocross adventure for sure.",
+        picture: "crf.jpg"
+    },
+    {
+        name: "100 years of solitude",
+        date: "2006",
+        country: "Colombia",
+        category: "Reading",
+        description: "Best novel written for Gabriel Gacia Marquez.",
+        picture: "100.jpg"
     }];
  
     db.collection('rates', function(err, collection) {
