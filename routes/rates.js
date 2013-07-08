@@ -15,6 +15,12 @@ db.open(function(err, db){
 				console.log("The 'rates' collection doesn't exist. Creating it with sample data...");
 				populateDB();
 			}
+            collection.count(function (err, count) {
+            if (!err && count === 0) {
+                console.log("The 'rates' collection doesn't exist. Creating it with sample data...");
+                populateDB();
+            }
+        });
 		});
 	}
 });
@@ -180,7 +186,7 @@ var populateDB = function() {
         picture: "ghibli.jpg"
     },
     {
-        name: "Metal Gear Solid V : Guns of the patriots",
+        name: "MGS V Guns of the patriots",
         date: "2006",
         country: "Japan",
         category: "Gaming",

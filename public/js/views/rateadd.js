@@ -1,20 +1,21 @@
-window.RateView = Backbone.View.extend({
+window.RateAddView = Backbone.View.extend({
 
     initialize: function () {
-        this.render();
-        
+        this.render();    
     },
 
     render: function () {
         $(this.el).html(this.template(this.model.toJSON()));
         setTimeout(function() {
-            utils.addRateit();
+            utils.addDatePicker();
         }, 0);
         return this;
     },
 
     events: {
         "change"        : "change",
+        "click .save"   : "beforeSave",
+        "click .delete" : "deleteRate",
         "drop #picture" : "dropHandler"
     },
 
@@ -35,6 +36,42 @@ window.RateView = Backbone.View.extend({
         } else {
             utils.removeValidationError(target.id);
         }
+    },
+
+    beforeSave: function () {
+        var self = this;
+        var check = this.model.validateAll();
+        if (check.isValid === false) {
+            utils.displayValidationErrors(check.messages);
+            return false;
+        }
+        this.saveRate();
+        return false;
+    },
+
+    saveRate: function () {
+        var self = this;
+        console.log('before save');
+        this.model.save(null, {
+            success: function (model) {
+                self.render();
+                app.navigate('rates/' + model.id, false);
+                utils.showAlert('Success!', 'Rate saved successfully', 'alert-success');
+            },
+            error: function () {
+                utils.showAlert('Error', 'An error occurred while trying to delete this item', 'alert-error');
+            }
+        });
+    },
+
+    deleteRate: function () {
+        this.model.destroy({
+            success: function () {
+                alert('Rate deleted successfully');
+                window.history.back();
+            }
+        });
+        return false;
     },
 
     dropHandler: function (event) {

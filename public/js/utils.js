@@ -51,7 +51,11 @@ window.utils = {
     },
 
     addDatePicker: function(){
-        $( "#datepick" ).datepicker();
+        $( "#dateEditable" ).datepicker();
+    },
+
+    addRateit: function() {
+        $('.rateit').rateit({ max: 1, backingfld: '#backing' });
     }
 
 };

@@ -41,7 +41,7 @@ var AppRouter = Backbone.Router.extend({
 
 	addRate: function() {
         var rate = new Rate();
-        $('#content').html(new RateView({model: rate}).el);
+        $('#content').html(new RateAddView({model: rate}).el);
         this.headerView.selectMenuItem('add-menu');
 	},
 
@@ -55,7 +55,7 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-utils.loadTemplate(['HomeView', 'HeaderView', 'RateView', 'RateListItemView', 'AboutView'], function() {
+utils.loadTemplate(['HomeView', 'HeaderView', 'RateView', 'RateAddView', 'RateListItemView', 'AboutView'], function() {
     app = new AppRouter();
     Backbone.history.start();
 });
