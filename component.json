@@ -1,0 +1,12 @@
+{
+  "name": "RateIt",
+  "version": "0.0.1",
+  "dependencies": {
+    "backbone": "latest",
+    "bootstrap": "latest",
+    "underscore": "latest",
+    "requirejs": "2.1.1",
+    "jquery": "latest",
+    "jquery-ui": "~1.10.3"
+  }
+}
